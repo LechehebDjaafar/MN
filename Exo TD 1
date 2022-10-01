@@ -1,0 +1,37 @@
+# -------------------------------------------
+# ---------| @ddos-attack_co|----------------
+# -------------------------------------------
+from math import log
+a = float(input("a = "))
+b = float(input("b = "))
+ebs = 10**(-4)
+n = log((b-a)/ebs)/log(2)
+delta = b-a
+times = round(n)
+
+
+def fun(a):
+    return (a**2)-2
+
+
+while times:
+    delta = b-a
+    c = (b+a)/2
+    print(f"a = {a}")
+    print(f"b = {b}")
+    print(f"c = {c}")
+    print(f"f(a) = {fun(a)}")
+    print(f"f(b) = {fun(b)}")
+    print(f"f(c) = {fun(c)}")
+    print(f"Dlt = {delta}")
+    print("*"*50)
+    if fun(c) > 0:
+        b = c
+    else:
+        a = c
+
+    times -= 1
+print("+"*50)
+print(
+    f"Ensample {ebs} == DELTA {delta} T9riban \n\n Followed me @ddos_attack_co")
+print("+"*50)
